@@ -24,7 +24,6 @@ shinyUI(fluidPage(
                         helpText("pull the moodbar to make smiley face happy or sad")
                 ),
                         
-                # Show a plot of the generated distribution
                 mainPanel(
                         
                         plotOutput("distPlot",hover = "hoverPlot")
