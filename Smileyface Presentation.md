@@ -51,4 +51,4 @@ transition-speed: fast
 ![plot of chunk unnamed-chunk-3](Smileyface Presentation-figure/unnamed-chunk-3-1.png) 
 
 * $0.5x^2$ will give you a sligthly less smiley mouth
-* [Try out if the simualtion of an expression tends to arouse it in **your** mind](https://jesperps.shinyapps.io/SmileyFace)
+* [Try out if the simualtion of an expression tends to arouse it in **your** mind](https://jesperps.shinyapps.io/facialExpressionsSimulator)

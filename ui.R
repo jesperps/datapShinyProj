@@ -10,7 +10,7 @@ library(shiny)
 shinyUI(fluidPage(
         
         # Application title
-        titlePanel("Smiley Face"),
+        titlePanel("Try out if simulated facial expressions influence your feelings"),
         
         # Sidebar with a slider input for changeing the mood of smiley face
         sidebarLayout(
@@ -23,7 +23,7 @@ shinyUI(fluidPage(
                                     max = 1,
                                     value = 0.5,
                                     step = 0.1),
-                        helpText("pull the moodbar to make smiley face happy or sad")
+                        helpText("Instructions: pull the moodbar to affect the facial expression")
                 ), 
                         
                 mainPanel(
