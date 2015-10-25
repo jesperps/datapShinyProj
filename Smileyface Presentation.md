@@ -12,7 +12,6 @@ transition: zoom
 >_"The free expression by outward signs of an emotion intensifies it. On the other hand, the repression, as far as this is possible, of all outward signs softens our emotions..._    
 ###  ...Even the simulation of an emotion tends to arouse it in our minds"
 \- Charles Darwin, 1872   
-***
 ![Picture of Grumpy faced Darwin](./Darwin.jpg)
 That includes simple sketchy versions of faces
 ========================================================
@@ -27,7 +26,7 @@ incremental: true
 Functions as mouth expressions
 ========================================================
 title: TRUE
-  
+transition: rotate
 * $x^2$ for smile   
 
 ```r
@@ -35,9 +34,8 @@ curve(x^2, xlim=c(-1,1), ylim=c(-1,1))
 ```
 
 ![plot of chunk unnamed-chunk-1](Smileyface Presentation-figure/unnamed-chunk-1-1.png) 
-
+   
 ***
-
 * $-x^2$ for frown   
 
 ```r

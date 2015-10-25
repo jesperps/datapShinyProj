@@ -15,6 +15,8 @@ shinyUI(fluidPage(
         # Sidebar with a slider input for changeing the mood of smiley face
         sidebarLayout(
                 sidebarPanel(
+                        width = "3",
+                        #height = "",
                         sliderInput("smilerate",
                                     "Moodbar:",
                                     min = -1,
@@ -22,13 +24,19 @@ shinyUI(fluidPage(
                                     value = 0.5,
                                     step = 0.1),
                         helpText("pull the moodbar to make smiley face happy or sad")
-                ),
+                ), 
                         
                 mainPanel(
-                        
-                        plotOutput("distPlot",hover = "hoverPlot")
-                        , verbatimTextOutput("info")
-                        , verbatimTextOutput("calculations")
+                        plotOutput(
+                                "distPlot"
+                                , click = "plot_click"
+                                , hover = "plot_hover"
+                                , width = "50%"
+                                #, height = "200px"
+                        ),
+                        textOutput("moodinfo"),
+                        textOutput("mouthcalc"),
+                        textOutput("eyecalc")
                 )
         )
 ))

@@ -40,17 +40,34 @@ shinyServer(function(input, output) {
                         moodtext <- "I am sad"
                 }
                 
-                output$info <- renderText({
-                        print(moodtext)        
+                #output$moodinfo <- renderText({
+                #        mood_str <- function(e) {
+                #                if(is.null(e)) return("Click on face to see mood\n")
+                #                paste0(moodtext, "\n")
+                #        }
+                #        paste0(
+                #                "Mood: ", mood_str(input$plot_click)
+                #        )
+                #})
+                
+                output$moodinfo <- renderText({
+                        paste0("Mood: ",moodtext)        
                 })
                 
-                output$calculations <- renderText({
-                        paste(
-                                c("mouth function: ", paste(n,"* x^2")
-                                  ,"eye function: ",paste(n^2," * x^3 +",eyepos))
-                                , sep = "\t"
-                        )  
-                })
+                output$mouthcalc <- renderText(({
+                        paste0("Mouth function: ", n,"* x^2")
+                }))
+                
+                output$eyecalc <- renderText(({
+                        paste0("Eye function: ", n^2," * x^3 +", eyepos)
+                }))
+                #output$calculations <- renderUI({
+                #        HTML(paste(
+                #                paste("mouth function: ", paste(n,"* x^2"))
+                #                , paste("eye function: ", paste(n^2," * x^3 +",eyepos))
+                #                , sep = "<br/>"
+                #        ))  
+                #})
         })
         
 })
