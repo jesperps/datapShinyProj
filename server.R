@@ -30,7 +30,6 @@ shinyServer(function(input, output) {
                 )
                 curve(eye(x), add = TRUE,from = -0.3, to = -0.1, lwd=5)
                 curve(eye(x), add = TRUE,from = 0.1, to = 0.3,lwd=5)
-                #plot(c(0,1),add = TRUE)
                 
                 if (n > 0.2) {
                         moodtext <- "I am happy"
@@ -39,16 +38,6 @@ shinyServer(function(input, output) {
                 } else if (n < -0.2){
                         moodtext <- "I am sad"
                 }
-                
-                #output$moodinfo <- renderText({
-                #        mood_str <- function(e) {
-                #                if(is.null(e)) return("Click on face to see mood\n")
-                #                paste0(moodtext, "\n")
-                #        }
-                #        paste0(
-                #                "Mood: ", mood_str(input$plot_click)
-                #        )
-                #})
                 
                 output$moodinfo <- renderText({
                         paste0("Mood: ",moodtext)        
@@ -61,13 +50,6 @@ shinyServer(function(input, output) {
                 output$eyecalc <- renderText(({
                         paste0("Eye function: ", n^2," * x^3 +", eyepos)
                 }))
-                #output$calculations <- renderUI({
-                #        HTML(paste(
-                #                paste("mouth function: ", paste(n,"* x^2"))
-                #                , paste("eye function: ", paste(n^2," * x^3 +",eyepos))
-                #                , sep = "<br/>"
-                #        ))  
-                #})
         })
         
 })
